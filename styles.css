@@ -1,0 +1,305 @@
+/* ------ Спецификация ------ */
+
+body {
+    font-size: 15px;
+    color: #a9adad;
+    background: #7694c1;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+div, p, form, input, a, span, button {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0px;
+    font-size: 15px;
+}
+
+ul, li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+    font-weight: 900;
+    line-height: 1.15em;
+}
+
+h1 {
+    color: #5572d6;
+    margin-top: 45px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+}
+
+h2 {
+    font-size: 15px;
+    color: #5572d6;
+}
+
+h3 {
+    font-weight: bold;
+    color: #000;
+}
+
+a, a:hover, a:active {
+    text-decoration: none;
+}
+
+a, button, input {
+    transition: all 0.5s ease;
+}
+
+i {
+    display: block;
+}
+
+.d-flex {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn {
+    font-weight: 900;
+    border-radius: 7px;
+    color: #fff;
+    background: #2753e9;
+    font-size: 15px;
+    width: 200px;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    outline: none;
+}
+
+.btn:hover {
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+.btn:active {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+input, input:hover, input:focus, input:active,
+button, button:hover, button:focus, button:active {
+    outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.link {
+    font-size: 14px;
+    color: #fff;
+    padding-bottom: 47px;
+}
+
+/*Hero screen */
+
+.cards {
+    margin-top: 10%;
+    background: #fff;
+}
+
+.wrap {
+    background: #fff;
+    padding-bottom: 20px;
+}
+
+.mobil {
+    padding: 30px 60px;
+}
+
+.mobil:hover {
+    box-shadow: inset 0px 0px 200px rgba(188, 181, 181, 0.5);
+}
+
+.descr__card {
+    color: #acadac;
+    margin-bottom: 25px;
+    max-width: 220px;
+    text-align: justify;
+}
+
+.price {
+    font-size: 30px;
+    padding-right: 5px;
+}
+
+.coin {
+    padding-top: 3px;
+}
+
+.card__price_text {
+    padding-top: 15px;
+    padding-left: 5px;
+}
+
+.card__price {
+    margin-left: auto;
+    color: #5572d6;
+}
+
+.mobil__mod {
+    margin-top: 15px;
+}
+
+.btn__give{
+    margin-left: 40%;
+}
+
+.btn__pay {
+    margin-left: 15%;
+    margin-bottom: 20px;
+    display: block;
+}
+
+
+/*modal win*/
+
+.modal_div {
+    width: 300px;
+    height: 450px; /* Рaзмеры дoлжны быть фиксирoвaны */
+    border-radius: 5px;
+    border: 2px #000 solid;
+    background: #fff;
+    position: fixed; /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+    top: 45%; /* oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
+    left: 50%; /* пoлoвинa экрaнa слевa */
+    margin-top: -200px;
+    margin-left: -150px; /* oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo */
+    display: none; /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
+    opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+    z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+    padding: 20px 10px;
+}
+
+/* Кнoпкa зaкрыть для тех ктo в тaнке) */
+.modal_close {
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    display: block;
+}
+
+/* Пoдлoжкa */
+#overlay {
+    z-index: 3; /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa */
+    position: fixed; /* всегдa перекрывaет весь сaйт */
+    background-color: #000; /* чернaя */
+    opacity: 0.8; /* нo немнoгo прoзрaчнa */
+    -moz-opacity: 0.8; /* фикс прозрачности для старых браузеров */
+    filter: alpha(opacity=80);
+    width: 100%;
+    height: 100%; /* рaзмерoм вo весь экрaн */
+    top: 0; /* сверху и слевa 0, oбязaтельные свoйствa! */
+    left: 0;
+    cursor: pointer;
+    display: none; /* в oбычнoм сoстoянии её нет) */
+}
+
+
+/* ------ Media Queries ------ */
+
+/* 992-1200px */
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 900px;
+    }
+    .btn__give {
+        margin-left: 35%;
+    }
+}
+
+/* 768-992px */
+@media screen and (max-width: 992px) {
+
+    .container {
+        width: 700px;
+    }
+
+    .cards {
+        flex-direction: column;
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    .btn_form {
+        width: 70%;
+    }
+    .btn__give {
+         margin-left: 35%;
+    }
+
+
+    .btn__pay {
+        margin-left: 15%;
+    }
+}
+    /* 576-768px */
+    @media screen and (max-width: 768px) {
+        .container {
+            width: 520px;
+        }
+        .btn__give {
+            margin-left: 30%;
+        }
+    }
+
+/* 320-576px */
+@media screen and (max-width: 576px) {
+    .container {
+        width: 90%;
+    }
+
+    .btn__give {
+       width: 90%;
+        margin-left: 5%;
+
+    }
+
+    .btn__pay {
+        width: 50%;
+        margin-left: 0%;
+    }
+
+}
